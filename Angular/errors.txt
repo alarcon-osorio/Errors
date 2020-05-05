@@ -1,0 +1,8 @@
+
+
+component.ts  --> list
+
+getGames() {
+    this.gamesService.getGames().
+    subscribe( res =>  this.games = res.games as[]);    
+  }

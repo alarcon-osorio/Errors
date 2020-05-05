@@ -1,0 +1,61 @@
+Error al ejecutar proyecto IDE JDeveloper
+[La aplicación MyApp se detuvo e insplegó desde la instancia de servidor 
+IntegratedWebLogicServer] Error en la implementación remota 
+(oracle.jdevimpl.deploy.common.Jsr88RemoteDeployer) . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Solución: Esto sucede cuando el proyecto uiModel ha creado un archivo web.xml por su cuenta.
+Por lo tanto, elimine el archivo del proyecto y vuelva a implementar la aplicación.
+
+
+-------------------------
+Ruta(Solo informativa): C:\Applications\oracle\Middleware\mywork\JRSpringMVC\JRSpringMVC\JRSpringMVC\deploy\JRSpringMVC.war
+
+----------------------------
+Error en JDEVELOPER
+ava.lang.NullPointerException
+    at javax.faces.webapp.UIComponentClassicTagBase.setJspId(UIComponentClassicTagBase.java:1858)
+
+    Solución: Verificar web.xml
+
+
+ -----------------   
+Error en Conexion NetBeans Java
+jdbc:mysql://192.168.0.100:3306/bibliotecabd?useLegacyDatetimeCode=false&serverTimezone=UTC
+
+------------------
+Error en librerias creando projecto JSF en JAVA 6
+Libraries 
+JAVA EE6 - Project 
+add libraries 
+JSF 2.3
+persistance 2.1
+JAVA API 6
+JDK 1.8
+GlashFish
+
+-------
+Error al dar RUN en proyecto 
+C:\Applications\java\Ejemplo\nbproject\build-impl.xml:1033: The module has not been deployed.
+See the server log for details.
+BUILD FAILED (total time: 14 seconds)
+
+Solucion 
+
+Go to 'Task Manager'
+Choose 'Processes' tab
+Click on 'Java(TM) Platform SE Binary'
+Click on 'End Process' button
+Go to your NetBeans project
+Clean & Build the project
+
+
+solucion 2
+Agregar libreria correspondiente al log encontrado en el server GlashFish 
+MySql librieia 5.1.49
+
+---------
+Error de contraseña Glass Fish 
+-Dejar vacia 

@@ -1,0 +1,11 @@
+Hay un error : MongooseServerSelectionError: connection timed out
+Hay un error : MongooseServerSelectionError: ENCONREFUSED
+
+C:\Program Files\MongoDB\Server\4.2\bin
+mongod.cfg
+
+# network interfaces
+net:
+  port: 27017
+  bindIp: 0.0.0.0
+

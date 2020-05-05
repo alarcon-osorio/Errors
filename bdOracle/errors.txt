@@ -1,0 +1,3 @@
+Error SQL: ORA-65096: nombre de usuario o rol común no válido
+
+solucion: alter session set "_ORACLE_SCRIPT"=true;

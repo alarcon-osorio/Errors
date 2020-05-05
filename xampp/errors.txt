@@ -1,0 +1,24 @@
+Acceso prohibido!
+XAMPP nuevo concepto de seguridad:
+
+Acceso a la solicitud objeto sólo está disponible desde la red local.
+
+Este ajuste puede ser configurado en el archivo "httpd-xampp.conf".
+
+Si usted cree que esto es un error del servidor, por favor comuníqueselo al administrador del portal.
+
+Error 403
+192.168.0.100
+Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.5
+
+
+// se soluciona en xammpp/apache/conf/extra/http-xampp.conf
+
+Alias /phpmyadmin "C:/xampp/phpMyAdmin/"
+    <Directory "C:/xampp/phpMyAdmin">
+        AllowOverride AuthConfig
+        Order deny,allow
+	Allow from all
+	Require all granted
+        ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+    </Directory>

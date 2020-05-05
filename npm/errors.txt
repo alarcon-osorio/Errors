@@ -1,0 +1,88 @@
+-- AFTER EXECUTE RAPIFY API
+
+alarc@DESKTOP-BE6C6FD C:\xampp\htdocs\ReactJS\my-project3\react-api>npm start
+
+> react-api@1.0.0 start C:\xampp\htdocs\ReactJS\my-project3\react-api
+> node ./src/index.js
+
+C:\xampp\htdocs\ReactJS\my-project3\react-api\src\index.js:11
+    controllers: [
+    ^^^^^^^^^^^
+
+SyntaxError: Unexpected identifier
+    at wrapSafe (internal/modules/cjs/loader.js:1072:16)
+    at Module._compile (internal/modules/cjs/loader.js:1122:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
+    at Module.load (internal/modules/cjs/loader.js:1002:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! react-api@1.0.0 start: `node ./src/index.js`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the react-api@1.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\alarc\AppData\Roaming\npm-cache\_logs\2020-04-07T22_36_25_964Z-debug.log
+
+---- END PROBLEM
+
+-- SOLUTION = FALTABA COMA LUEGO DE 
+middleware: [
+        cors()
+    ], <-- esta coma
+
+-- END SOLUTION
+
+/*********************/
+/*****ANGULAR*********/
+/*********************/
+
+alarc@DESKTOP-BE6C6FD C:\xampp\htdocs\Angular\my-project>npm start 192.168.0.100
+
+> my-project@0.0.0 start C:\xampp\htdocs\Angular\my-project
+> ng serve "192.168.0.100"
+
+An unhandled exception occurred: Project '192.168.0.100' does not support the 'serve' target.
+See "C:\Users\alarc\AppData\Local\Temp\ng-LC9heg\angular-errors.log" for further details.
+npm ERR! code ELIFECYCLE
+npm ERR! syscall spawn
+npm ERR! file C:\WINDOWS\system32\cmd.exe
+npm ERR! errno ENOENT
+npm ERR! my-project@0.0.0 start: `ng serve "192.168.0.100"`
+npm ERR! spawn ENOENT
+npm ERR!
+npm ERR! Failed at the my-project@0.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\alarc\AppData\Roaming\npm-cache\_logs\2020-04-13T16_28_34_213Z-debug.log
+
+------
+
+SOLUCTION:
+La solución es simple. Simplemente enlace a la dirección de interfaz correcta a través de ng serve --host=0.0.0.0
+
+FINAL RESULT--->
+larc@DESKTOP-BE6C6FD C:\xampp\htdocs\Angular\my-project>ng serve --host=192.168.0.100
+WARNING: This is a simple server for use in testing or debugging Angular applications
+locally. It hasn't been reviewed for security issues.
+
+Binding this server to an open connection can result in compromising your application or
+computer. Using a different host than the one passed to the "--host" flag might result in
+websocket connection issues. You might need to use "--disableHostCheck" if that's the
+case.
+
+chunk {main} main.js, main.js.map (main) 60.6 kB [initial] [rendered]
+chunk {polyfills} polyfills.js, polyfills.js.map (polyfills) 141 kB [initial] [rendered]
+chunk {runtime} runtime.js, runtime.js.map (runtime) 6.15 kB [entry] [rendered]
+chunk {styles} styles.js, styles.js.map (styles) 9.76 kB [initial] [rendered]
+chunk {vendor} vendor.js, vendor.js.map (vendor) 2.99 MB [initial] [rendered]
+Date: 2020-04-13T16:33:37.511Z - Hash: cfe2bf5a66d5bf0cf25e - Time: 22781ms
+** Angular Live Development Server is listening on 192.168.0.100:4200, open your browser on http://192.168.0.100:4200/ **: Compiled successfully.
+
+
+--- END SOLUTION 
