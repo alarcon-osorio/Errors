@@ -15,7 +15,7 @@ Ruta(Solo informativa): C:\Applications\oracle\Middleware\mywork\JRSpringMVC\JRS
 
 ----------------------------
 Error en JDEVELOPER
-ava.lang.NullPointerException
+java.lang.NullPointerException
     at javax.faces.webapp.UIComponentClassicTagBase.setJspId(UIComponentClassicTagBase.java:1858)
 
     Solución: Verificar web.xml
@@ -59,3 +59,29 @@ MySql librieia 5.1.49
 ---------
 Error de contraseña Glass Fish 
 -Dejar vacia 
+
+-------------------------
+javax.naming.NameNotFoundException:
+
+El error significa que está intentando buscar el nombre JNDI, que no está asociado a ningún componente EJB - el componente con ese nombre no existe.
+
+En cuanto a la estructura dir: debe crear un archivo JAR con componentes EJB. Como entiendo, desea jugar con componentes EJB 2.X (al menos el ejemplo vinculado sugiere eso) por lo que la estructura del archivo JAR debe ser:
+
+/com/mypackage/MyEJB.class /com/mypackage/MyEJBInterface.class /com/mypackage/etc... etcetera... clases java /META-INF/ejb-jar.xml /META-INF/jboss.xml
+
+El archivo JAR es más o menos archivo ZIP con extensión de archivo cambiado de ZIP a JAR.
+
+Por cierto. Si utiliza JBoss 5, puede trabajar con EJB 3.0, que son mucho más fáciles de configurar. El componente más simple es
+
+@Stateless(mappedName="MyComponentName")
+@Remote(MyEJBInterface.class)
+public class MyEJB implements MyEJBInterface{
+   public void bussinesMethod(){
+
+   }
+}
+No se necesita ejb-jar.xml, jboss.xml, solo EJB JAR con MyEJB y MyEJBInterface compiladas.
+
+Ahora en el código de cliente debe buscar "MyComponentName".
+
+--------------------------------------

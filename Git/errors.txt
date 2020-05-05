@@ -14,4 +14,4 @@ Solution
 5.git commit -m "some init msg"
 
 -----------------------
-Comandos Git - TODO
+Comandos Git - TODO - JEISON ALARCON OSORIO
