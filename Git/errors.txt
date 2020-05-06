@@ -13,5 +13,7 @@ Solution
 4.git add *
 5.git commit -m "some init msg"
 
+Hay que configurar cuentas
+
 -----------------------
-Comandos Git - TODO
+Comandos Git - TODO JEISON ALARCON OSORIO
