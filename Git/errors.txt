@@ -17,3 +17,22 @@ Hay que configurar cuentas
 
 -----------------------
 Comandos Git - TODO JEISON ALARCON OSORIO
+
+
+
+
+$ git push origin master
+Enter passphrase for key '/c/Users/alarc/.ssh/id_rsa':
+To github.com:alarcon-osorio/SpringBoot.git
+ ! [rejected]        master -> master (non-fast-forward)
+
+Solucion
+$ git pull origin master
+Enter passphrase for key '/c/Users/alarc/.ssh/id_rsa':
+From github.com:alarcon-osorio/SpringBoot
+ * branch            master     -> FETCH_HEAD
+hint: Waiting for your editor to close the file...
+[main 2020-07-04T03:50:15.545Z] update#setState idle
+Merge made by the 'recursive' strategy.
+ .../java/com/springboot/backend/producto/service/ProductoService.java   | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
