@@ -36,3 +36,8 @@ hint: Waiting for your editor to close the file...
 Merge made by the 'recursive' strategy.
  .../java/com/springboot/backend/producto/service/ProductoService.java   | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
+ 
+ --------------------------------
+  “fatal: refusing to merge unrelated histories” 
+  git pull origin master --allow-unrelated-histories
+
