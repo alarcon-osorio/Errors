@@ -1,0 +1,4 @@
+Internal Exception: java.sql.SQLException: The server time zone value 'Hora est. Pac?fico, Sudam?ric' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support
+
+También se puede configurar la zona horaria de MySQL ejecutando esta query y asi evitar modificar la URL
+SET GLOBAL time_zone = '-5:00';
