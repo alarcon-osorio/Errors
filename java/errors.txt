@@ -91,3 +91,16 @@ IntelliJ --> Agregando databaseBase error Mysql
 Internal Exception: java.sql.SQLException: The server time zone value 'Hora est. Pac?fico, Sudam?ric' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support
 
 SET GLOBAL time_zone = '-5:00';
+
+
+----------------------------------
+Error en Spring donde indica error en Modelos, Controlador o Servicios 
+
+<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+to
+<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+en dp.properties o application.properties
+
+Cambiar version de MySql en pom.xml refresacr dependencias
+
+------------------------------------------
