@@ -37,6 +37,9 @@ middleware: [
 
 -- END SOLUTION
 
+
+------------------------------------------------------------------------------------
+
 /*********************/
 /*****ANGULAR*********/
 /*********************/
@@ -87,9 +90,9 @@ Date: 2020-04-13T16:33:37.511Z - Hash: cfe2bf5a66d5bf0cf25e - Time: 22781ms
 
 --- END SOLUTION 
 
-
-
 ----------------------------------------------------------------
+--ERROR DE EJECUCION DE SCRIPT NPM AL CREAR EL PROYECTO
+
 _ng : No se puede cargar el archivo C:\Users\XXXXXXXXX\AppData\Roaming\npm\ng.ps1 porque la ejecución de scripts está deshabilitada en este sistema. Para obtener más 
 información, consulta el tema about_Execution_Policies en https:/go.microsoft.com/fwlink/?LinkID=135170_
 En línea: 1 Carácter: 1
