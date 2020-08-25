@@ -86,3 +86,28 @@ Date: 2020-04-13T16:33:37.511Z - Hash: cfe2bf5a66d5bf0cf25e - Time: 22781ms
 
 
 --- END SOLUTION 
+
+
+
+----------------------------------------------------------------
+_ng : No se puede cargar el archivo C:\Users\XXXXXXXXX\AppData\Roaming\npm\ng.ps1 porque la ejecución de scripts está deshabilitada en este sistema. Para obtener más 
+información, consulta el tema about_Execution_Policies en https:/go.microsoft.com/fwlink/?LinkID=135170_
+En línea: 1 Carácter: 1
++ ng new frontend
++ ~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+
+SOLUCTION: 
+
+PS C:\WINDOWS\system32> Get-ExecutionPolicy
+Restricted
+PS C:\WINDOWS\system32> Set-ExecutionPolicy Unrestricted
+
+Cambio de directiva de ejecución
+La directiva de ejecución te ayuda a protegerte de scripts en los que no confías. Si cambias dicha directiva, podrías
+exponerte a los riesgos de seguridad descritos en el tema de la Ayuda about_Execution_Policies en
+https:/go.microsoft.com/fwlink/?LinkID=135170. ¿Quieres cambiar la directiva de ejecución?
+[S] Sí  [O] Sí a todo  [N] No  [T] No a todo  [U] Suspender  [?] Ayuda (el valor predeterminado es "N"): s
+
+--------------------------------------------------------------------
