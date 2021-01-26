@@ -40,4 +40,8 @@ Merge made by the 'recursive' strategy.
  --------------------------------
   “fatal: refusing to merge unrelated histories” 
   git pull origin master --allow-unrelated-histories
+  
+  ----
+  
+  git push -f origin main
 
